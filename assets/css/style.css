@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #001119;
+    background-color: #000000;
     height: 100vh;
 
 }
@@ -41,6 +41,18 @@ body {
     transform: scale(1.05);
     
 }
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+h2.titulo span{
+    color: #15384b;
+}
+
+
+
+
 
 /* ESTILOS DE CABEÇALHO */
 header{
@@ -136,4 +148,96 @@ h1 span{
     100%{
         top: 30px;
     }
+}
+
+/* ESTILOS DAS ESPECIALIDADES */
+section.especialidades{
+    padding: 70px 4%;
+
+}
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidades-box{
+    color: #fff;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: .2s;
+    
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px #ffffff77;
+}
+
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: #15384b;
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILOS DO SOBRE */
+section.sobre{
+    padding: 40px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.img-sobre img{
+    border-radius: 20px;
+}
+
+h2.sobre{
+    color: #fff;
+    font-size: 38px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+h2.sobre span{
+    color: #15384b;
+    display: block;
+
+}    
+p.titulo{
+    color: white;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1020px){
+    /* CLASSES GERAIS */
+    .interface {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza os elementos horizontalmente */
+        text-align: center; /* Centraliza o texto dentro dos elementos */
+    }
+    
+    .logo {
+        margin-bottom: 20px; /* Espaçamento inferior entre o logotipo e os outros elementos */
+    }
+
+    .flex{
+        flex-direction: column;
+    }
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    /* CABEÇALHO */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    
 }

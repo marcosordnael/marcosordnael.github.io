@@ -233,7 +233,7 @@ p.titulo{
 
 section.portfolio{
     padding: 80px 4%;
-    box-shadow: 0px 0px 40px #ffffff1d;
+    box-shadow: 0px 0px 40px 10px #ffffff1d;
 }
 
 section.portfolio .flex{
@@ -332,7 +332,7 @@ form .btn-enviar input{
 
 footer{
     padding: 60px 4%;
-    box-shadow: 0px 0px 40px #ffffff1d;
+    box-shadow: 0px 0px 40px 10px #ffffff1d;
 }
 
 footer .flex{
@@ -382,6 +382,15 @@ footer .line-footer p a {
     /* CABEÇALHO */
     .menu-desktop, .btn-contato{
         display: none;
+    }
+
+    /* TOPO DO SITE */
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .img-topo-site{
+        width: 70%;
     }
 
     

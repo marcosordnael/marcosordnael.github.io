@@ -106,9 +106,18 @@ header nav.menu-desktop ul li {
 
 }
 
+.overlay-menu{
+    background-color: #000000a7;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
 /* ESTILOS MENU MOBILE */
-
-
 .btn-abrir-menu i{
     color: #15384b;
     font-size: 40px;
@@ -127,7 +136,19 @@ header nav.menu-desktop ul li {
     z-index: 99999;
     width: 0%;
     overflow: hidden;
+    transition: .5s;
 
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+.menu-mobile.abrir-menu ~.overlay-menu{
+    display: block;
+}
+
+.menu-mobile.fechar-menu{
+    width: 0;
 }
 
 .menu-mobile .btn-fechar {

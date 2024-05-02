@@ -376,6 +376,7 @@ footer .line-footer p a {
         flex-direction: column;
     }
     .topo-do-site .flex{
+        gap: 40px;
         flex-direction: column-reverse;
     }
 

@@ -61,7 +61,7 @@ h2.titulo span {
 
 /* ESTILOS DE CABEÇALHO */
 header {
-    padding: 40px 4%;
+    padding: 20px 4%;
 }
 
 header>.interface {
@@ -107,14 +107,15 @@ header nav.menu-desktop ul li {
 }
 
 /* ESTILOS MENU MOBILE */
-.btn-abrir-menu{
-    cursor: pointer;
-    display: block;
-}
+
 
 .btn-abrir-menu i{
     color: #15384b;
     font-size: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px 4%;
 }
 
 .menu-mobile{
@@ -124,7 +125,9 @@ header nav.menu-desktop ul li {
     top: 0;
     right: 0;
     z-index: 99999;
-    width: 70%;
+    width: 0%;
+    overflow: hidden;
+
 }
 
 .menu-mobile .btn-fechar {

@@ -15,3 +15,14 @@ menu.addEventListener('click' , ()=>{
 overLay.addEventListener('click' , ()=>{
     menu.classList.remove('abrir-menu')
 })
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// FUNÇÃO ENVIAR DADOS DO FORMULÁRIO PARA EMAIL

@@ -72,10 +72,12 @@ header>.interface {
 }
 
 .logo {
+    order: -1;
     transition: .2s;
 }
 
 .logo:hover {
+    order: -1;
     transform: scale(1.5);
 
 }

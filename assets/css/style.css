@@ -128,6 +128,7 @@ header nav.menu-desktop ul li {
     top: 0;
     right: 0;
     padding: 20px 4%;
+    display: none;
 }
 
 .menu-mobile{
@@ -140,6 +141,7 @@ header nav.menu-desktop ul li {
     width: 0%;
     overflow: hidden;
     transition: .5s;
+    
 
 }
 
@@ -422,6 +424,7 @@ form .btn-enviar input {
 
 
 
+
 /* ESTILOS FOOTER */
 
 footer {
@@ -462,7 +465,10 @@ footer .line-footer p a {
         display: flex;
         flex-direction: column;
         text-align: center;
-        /* Centraliza o texto dentro dos elementos */
+       
+    }
+    .btn-abrir-menu i{
+        display: ;
     }
 
 
@@ -547,7 +553,7 @@ footer .line-footer p a {
     /* PORTFOLIO */
 
     section.portfolio{
-        padding: 80px 8%;
+        
     }
 
     .img-port {

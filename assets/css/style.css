@@ -456,6 +456,8 @@ footer .line-footer p a {
 
 
 
+
+
 /* ESTILOS RESPONSIVO */
 
 @media screen and (max-width: 1020px) {
@@ -468,7 +470,7 @@ footer .line-footer p a {
        
     }
     .btn-abrir-menu i{
-        display: ;
+        display: inline-block;
     }
 
 

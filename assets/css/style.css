@@ -557,9 +557,7 @@ footer .line-footer p a {
     }
 
     .img-port {
-        width: 100wh;
-        height: 100vh;
-        margin: 0 8%;
+        
     
     }
 
@@ -571,6 +569,11 @@ footer .line-footer p a {
     footer.flex{
         flex-direction: column;
         gap: 30px;
+        
     }
+    .line-footer .bi-envelope-fill{
+        font-size: 14px;
+    }
+    
 
 }

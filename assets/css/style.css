@@ -454,26 +454,44 @@ footer .line-footer p a {
     color: #FFF;
 }
 
-/* Modal */
-.modal {
-    display: none; /* Por padrão, o modal estará oculto */
+/* Janela */
+.janela {
+    display: none; 
     position: fixed;
-    z-index: 999; /* Certifique-se de que o modal esteja acima de todo o resto */
+    z-index: 999; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semitransparente */
+    background-color: rgba(0, 0, 0, 0.7); 
   }
   
-  .conteudo-modal {
+  .conteudo-janela {
     background-color: #fefefe;
     margin: 5% auto;
     padding: 30px;
     text-align: center;
     border: 1px solid #888;
-    width: 90%; /* Defina a largura do modal conforme necessário */
+    width: 90%; /* Defina a largura da janela conforme necessário */
+  }
+  .conteudo-janela2 {
+    background-color: #fefefe;
+    margin: 2% auto;
+    padding: 0px;
+    text-align: center;
+    border: 1px solid #888;
+    width: 90%;
+    height: 90%; /* Defina a largura da janela conforme necessário */
+  }
+
+  .conteudo-janela img{
+    margin: 10px;
+  }
+
+  iframe{
+    width: 100%;
+    height: 100%;
   }
   
   .fechar {
@@ -573,20 +591,22 @@ footer .line-footer p a {
         text-align: left;
         
     }
-    /* Modal */
+    /* janela */
     .fechar {
         position: fixed;
-        top: 10px;
+        top: 0px;
         right: 10px;
         z-index: 1000;
-        color: #f80505;
-        font-size: 38px;
+        color: #eee6e6;
+        font-size: 20px;
         font-weight: bold;
       }
       
-      .modal {
-        position: fixed;
-        
+      .conteudo-janela { 
+        margin: 5% auto; 
+      }
+      .conteudo-janela2 { 
+        margin: 10% auto; 
       }
       
 

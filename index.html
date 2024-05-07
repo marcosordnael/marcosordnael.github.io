@@ -171,15 +171,14 @@
 
                 <div class="flex">
 
-                    <a href="https://marcosordnael.github.io/html/JOGO%20DA%20VELHA/index.html#" target="_blank">
-                        <div class="img-port"
-                            style="background-image: url(assets/image/projetos/iPhone-13-PRO-127.0.0.1\ \(1\).png);">
+                    <div class="img-port"
+                        style="background-image: url(assets/image/projetos/iPhone-13-PRO-127.0.0.1\ \(1\).png);" onclick="abrirJanela1()">
 
-                            <div class="overlay">
-                                <p>Site Jogo da Velha</p>
-                            </div>
+                        <div class="overlay">
+                            <p>Site Jogo da Velha</p>
                         </div>
-                    </a>
+                    </div>
+
 
 
                     <div class="img-port"
@@ -204,6 +203,16 @@
 
                 </div>
 
+                <!-- JANELAS FLUTUANTE -->
+
+                <div id="janela1" class="janela">
+                    <span class="fechar" onclick="fecharJanela1()"><i class="bi bi-x-square"></i></span>
+                    <div class="conteudo-janela1">
+                        <iframe id="jogovelha" src="https://marcosordnael.github.io/html/JOGO%20DA%20VELHA/index.html#"
+                            frameborder="0"></iframe>
+                    </div>
+                </div>
+
                 <div id="janela2" class="janela">
                     <span class="fechar" onclick="fecharJanela2()"><i class="bi bi-x-square"></i></span>
                     <div class="conteudo-janela2">
@@ -222,6 +231,7 @@
                         <img src="assets/image/projetos/tela_lista.png" alt="lista" width="200px">
                     </div>
                 </div>
+                <!-- FIM JANELAS FLUTUANTES -->
 
             </div>
         </section>

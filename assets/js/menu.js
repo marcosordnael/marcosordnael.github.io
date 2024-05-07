@@ -23,6 +23,7 @@ function abrirJanela() {
   function fecharJanela() {
     document.getElementById('janela3').style.display = 'none';
   }
+
 // Abrir Janela 2
 function abrirJanela2() {
     document.getElementById('janela2').style.display = 'block';
@@ -31,6 +32,14 @@ function abrirJanela2() {
   function fecharJanela2() {
     document.getElementById('janela2').style.display = 'none';
   }
+
+// Abrir Janela 1
+function abrirJanela1(){
+    document.getElementById('janela1').style.display = 'block';
+}
+    function fecharJanela1(){
+        document.getElementById('janela1').style.display = 'none';
+    }
   
 
 // ANIMAR ROLAGEM DA PAGINA

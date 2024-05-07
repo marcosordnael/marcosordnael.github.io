@@ -466,23 +466,35 @@ footer .line-footer p a {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.7); 
   }
-  
-  .conteudo-janela {
+
+  .conteudo-janela1 {
     background-color: #fefefe;
-    margin: 5% auto;
-    padding: 30px;
+    margin: 1% auto;
+    padding: 0px;
     text-align: center;
     border: 1px solid #888;
-    width: 90%; /* Defina a largura da janela conforme necessário */
+    width: 80%;
+    height: 95%; /* Defina a largura da janela conforme necessário */
   }
+  
+  
   .conteudo-janela2 {
     background-color: #fefefe;
-    margin: 2% auto;
+    margin: 1% auto;
     padding: 0px;
     text-align: center;
     border: 1px solid #888;
     width: 90%;
     height: 90%; /* Defina a largura da janela conforme necessário */
+  }
+
+  .conteudo-janela {
+    background-color: #fefefe;
+    margin: 3% auto;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #888;
+    width: 90%; /* Defina a largura da janela conforme necessário */
   }
 
   .conteudo-janela img{
@@ -492,6 +504,11 @@ footer .line-footer p a {
   iframe{
     width: 100%;
     height: 100%;
+  }
+  #jogovelha{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
   
   .fechar {
@@ -597,7 +614,7 @@ footer .line-footer p a {
         top: 0px;
         right: 10px;
         z-index: 1000;
-        color: #faf8f8;
+        color: #c7c3c3;
         font-size: 20px;
         font-weight: bold;
       }
@@ -607,6 +624,11 @@ footer .line-footer p a {
       }
       .conteudo-janela2 { 
         margin: 10% auto; 
+      }
+      .conteudo-janela1{
+        margin: 10% auto;
+        position: static;
+        
       }
       
 

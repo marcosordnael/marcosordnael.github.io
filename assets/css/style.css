@@ -625,11 +625,15 @@ footer .line-footer p a {
       .conteudo-janela2 { 
         margin: 10% auto; 
       }
-      .conteudo-janela1{
-        margin: 10% auto;
-        position: static;
-        
-      }
+      .conteudo-janela1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Ou qualquer outra largura desejada */
+    height: 90%; /* Ou qualquer outra altura desejada */
+}
+
       
 
 

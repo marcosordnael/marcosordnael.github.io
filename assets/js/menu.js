@@ -15,6 +15,15 @@ menu.addEventListener('click' , ()=>{
 overLay.addEventListener('click' , ()=>{
     menu.classList.remove('abrir-menu')
 })
+// Abrir Modal
+function abrirModal() {
+    document.getElementById('modal').style.display = 'block';
+  }
+  
+  function fecharModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
+  
 
 // ANIMAR ROLAGEM DA PAGINA
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -53,12 +53,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// Armazena a URL atual antes de enviar o formulário
-var urlAtual = window.location.href;
+// Armazena a seção do formulário
+var secaoFormulario = document.getElementById('mensagem-sucesso');
+
+// Armazena a posição vertical da seção do formulário em relação ao topo da página
+var posicaoFormulario = secaoFormulario.offsetTop;
 
 // FORMULÁRIO
 document.getElementById('meu-formulario').addEventListener('submit', function(event) {
-    event.preventDefault(); // faça que o formulário seja enviado normalmente
+    event.preventDefault(); 
     // 
     exibirMensagemDeSucesso();
 });
@@ -73,8 +76,11 @@ function exibirMensagemDeSucesso() {
     // Limpa os dados do formulário
     formulario.reset();
 
-    // Redireciona o usuário para a URL armazenada após um pequeno atraso (por exemplo, 3 segundos)
+    // Redireciona o usuário para a posição do formulário após um pequeno atraso (por exemplo, 3 segundos)
     setTimeout(function() {
-        window.location.href = urlAtual;
+        window.scrollTo({
+            top: posicaoFormulario,
+            behavior: 'smooth' // role suavemente para a seção do formulário
+        });
     }, 3000); // Tempo em milissegundos antes do redirecionamento
 }

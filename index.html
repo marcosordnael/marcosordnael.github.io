@@ -243,13 +243,20 @@
             <div class="interface">
                 <h2 class="titulo">FALE <span>COMIGO.</span></h2>
 
-                <form method="post" id="meuFormulario">
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
-                    <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
-                    <input type="tel" name="telefone" id="telefone" placeholder="Seu celular" required>
-                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" cols="30" rows="10"
-                        required></textarea>
-                    <div class="btn-enviar"><input type="submit" name="enviar" value="ENVIAR" id="enviar"></div>
+                <form id="meu-formulario" action="https://api.staticforms.xyz/submit" method="post">
+                    <input type="hidden" name="accessKey" value="0b58db2a-1f95-4033-baa5-1d6a9a1e8f86">
+                    <input type="hidden" name="redirectTo" value="https://marcosordnael.github.io/">
+                    <input type="text" name="name" id="name" placeholder="Seu nome completo" required>
+                    <input type="text" name="email" id="email" placeholder="Seu e-mail" required>
+                    <input type="text" name="phone" id="phone" placeholder="Seu celular" required>
+                    <textarea name="message" id="message" placeholder="Sua mensagem" cols="30" rows="10" required></textarea>
+                    
+                    <div id="mensagem-sucesso" style="display: none;">
+                        O formulário foi enviado com sucesso!
+                    </div>
+                    
+                    <div class="btn-enviar"><input type="submit" name="enviar" value="ENVIAR" id="enviar">
+                    </div>
                 </form>
 
             </div>

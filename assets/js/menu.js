@@ -52,40 +52,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// FUNÇÃO ENVIAR DADOS DO FORMULÁRIO PARA EMAIL
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("meuFormulario").addEventListener("submit", function(event) {
-        // Recupera os dados do formulário
-        var nome = document.getElementById("nome").value;
-        var email = document.getElementById("email").value;
-        var telefone = document.getElementById("telefone").value;
-        var mensagem = document.getElementById("mensagem").value;
 
-        // Cria um objeto FormData para enviar os dados
-        var formData = new FormData();
-        formData.append("nome", nome);
-        formData.append("email", email);
-        formData.append("telefone", telefone);
-        formData.append("mensagem", mensagem);
+// Armazena a URL atual antes de enviar o formulário
+var urlAtual = window.location.href;
 
-        // Envia uma solicitação AJAX para o servidor PHP
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "form.php", true);
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                alert("E-mail enviado com sucesso!");
-                // Limpa os campos do formulário após o envio
-                document.getElementById("meuFormulario").reset();
-            } else {
-                alert("Ocorreu um erro ao enviar o e-mail. Por favor, tente novamente.");
-            }
-        };
-        xhr.onerror = function() {
-            alert("Erro de conexão. Por favor, verifique sua conexão com a internet e tente novamente.");
-        };
-        xhr.send(formData);
-
-        // Retira o comportamento padrão de envio do formulário
-        event.preventDefault();
-    });
+// FORMULÁRIO
+document.getElementById('meu-formulario').addEventListener('submit', function(event) {
+    event.preventDefault(); // faça que o formulário seja enviado normalmente
+    // 
+    exibirMensagemDeSucesso();
 });
+
+function exibirMensagemDeSucesso() {
+    var formulario = document.getElementById('meu-formulario');
+    var mensagemSucesso = document.getElementById('mensagem-sucesso');
+    
+    // Exibe a mensagem de sucesso
+    mensagemSucesso.style.display = 'block'; 
+
+    // Limpa os dados do formulário
+    formulario.reset();
+
+    // Redireciona o usuário para a URL armazenada após um pequeno atraso (por exemplo, 3 segundos)
+    setTimeout(function() {
+        window.location.href = urlAtual;
+    }, 3000); // Tempo em milissegundos antes do redirecionamento
+}

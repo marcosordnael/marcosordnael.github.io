@@ -421,7 +421,9 @@ form .btn-enviar input {
     transition: .2s;
 
 }
-
+#mensagem-sucesso{
+    color: white;
+}
 
 
 

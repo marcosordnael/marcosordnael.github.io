@@ -54,14 +54,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 // Armazena a seção do formulário
-var secaoFormulario = document.getElementById('mensagem-sucesso');
+var secaoFormulario = document.getElementById('formulario');
 
 // Armazena a posição vertical da seção do formulário em relação ao topo da página
 var posicaoFormulario = secaoFormulario.offsetTop;
 
 // FORMULÁRIO
 document.getElementById('meu-formulario').addEventListener('submit', function(event) {
-    event.preventDefault(); 
+    
     // 
     exibirMensagemDeSucesso();
 });

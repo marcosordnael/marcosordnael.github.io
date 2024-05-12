@@ -1,4 +1,6 @@
 
+import {db, set, push, ref} from "./configFirebase.js"
+
 let btnMenu = document.getElementById('btn-menu')
 let menu = document.getElementById('menu-mobile')
 let overLay = document.getElementById('overlay-menu')
@@ -53,34 +55,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// Armazena a seção do formulário
-var secaoFormulario = document.getElementById('formulario');
 
-// Armazena a posição vertical da seção do formulário em relação ao topo da página
-var posicaoFormulario = secaoFormulario.offsetTop;
 
 // FORMULÁRIO
-document.getElementById('meu-formulario').addEventListener('submit', function(event) {
-    
-    // 
-    exibirMensagemDeSucesso();
-});
+function formulario(event) {
+  event.preventDefault();
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const telefone = document.getElementById("telefone").value;
+  const mensagem = document.getElementById("mensagem").value;
+
+  // Obtém uma referência para a lista de contatos
+  const contatosRef = ref(db, 'contatos');
+
+  // Adiciona um novo contato à lista utilizando push com a chave personalizada
+  const novoContatoRef = push(contatosRef);
+
+  // Obter a chave única gerada pelo Firebase
+  const novoContatoKey = novoContatoRef.key;
+
+  // Combine o nome com o número sequencial para criar a chave do contato
+  const chaveContato = `${nome}_${novoContatoKey}`;
+
+  // Define os dados do novo contato usando a chave personalizada
+  set(ref(db, `contatos/${chaveContato}`), {
+      nome: nome,
+      email: email,
+      telefone: telefone,
+      mensagem: mensagem
+  });
+
+  // Limpa os dados do formulário
+  event.target.reset();
+}
+
+
+window.formulario = formulario;
 
 function exibirMensagemDeSucesso() {
-    var formulario = document.getElementById('meu-formulario');
+    var formularioElement = document.getElementById('meu-formulario');
     var mensagemSucesso = document.getElementById('mensagem-sucesso');
     
     // Exibe a mensagem de sucesso
     mensagemSucesso.style.display = 'block'; 
 
     // Limpa os dados do formulário
-    formulario.reset();
-
-    // Redireciona o usuário para a posição do formulário após um pequeno atraso (por exemplo, 3 segundos)
-    setTimeout(function() {
-        window.scrollTo({
-            top: posicaoFormulario,
-            behavior: 'smooth' // role suavemente para a seção do formulário
-        });
-    }, 3000); // Tempo em milissegundos antes do redirecionamento
+    formularioElement.reset();
 }
+

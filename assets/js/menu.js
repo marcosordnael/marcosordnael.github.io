@@ -87,6 +87,7 @@ function formulario(event) {
 
   // Limpa os dados do formulário
   event.target.reset();
+  exibirMensagemDeSucesso();
 }
 
 
@@ -99,7 +100,7 @@ function exibirMensagemDeSucesso() {
     // Exibe a mensagem de sucesso
     mensagemSucesso.style.display = 'block'; 
 
-    // Limpa os dados do formulário
-    formularioElement.reset();
+  
 }
+
 

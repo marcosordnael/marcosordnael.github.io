@@ -412,17 +412,21 @@ form .btn-enviar {
     text-align: center;
 }
 
-form .btn-enviar input {
-    width: 120px;
+form .btn-enviar button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
     background-color: #15384b;
-    color: #FFF;
-    font-weight: 700;
+    border: 0;
+    border-radius: 30px;
     cursor: pointer;
+    color: #fff;
     transition: .2s;
 
 }
 #mensagem-sucesso{
     color: white;
+    text-align: center;
 }
 
 

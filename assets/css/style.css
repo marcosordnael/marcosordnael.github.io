@@ -281,6 +281,8 @@ section.sobre {
 section.sobre .flex {
     align-items: center;
     gap: 60px;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .img-sobre img {
@@ -302,10 +304,10 @@ h2.sobre span {
 }
 
 
-p.titulo {
+p.txt-sobre {
     margin: 20px 0;
     color: white;
-    text-align: justify;
+    
 }
 
 .btn-social button {
@@ -636,8 +638,8 @@ footer .line-footer p a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%; /* Ou qualquer outra largura desejada */
-    height: 90%; /* Ou qualquer outra altura desejada */
+    width: 90%; 
+    height: 90%;
 }
 
       

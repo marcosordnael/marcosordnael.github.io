@@ -287,6 +287,7 @@ section.sobre .flex {
 
 .img-sobre img {
     border-radius: 20px;
+    
 }
 
 h2.sobre {
@@ -591,7 +592,7 @@ footer .line-footer p a {
         text-align: left;
     }
 
-    .img-topo-site {
+    .img {
         width: 70%;
     }
 
@@ -653,6 +654,8 @@ footer .line-footer p a {
         
     }
 
+    
+
     .btn-social button{
         margin-bottom: 30px;
     }
@@ -664,10 +667,7 @@ footer .line-footer p a {
         
     }
 
-    .img-port {
-        
-    
-    }
+
 
     section.portfolio.flex{
         gap: 60px;

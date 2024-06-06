@@ -258,10 +258,15 @@ section.especialidades .flex {
 
 }
 
+
 .especialidades .especialidades-box:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 8px #ffffff77;
+    background-color: #aaaaaa98;
+    
+    
 }
+
 
 .especialidades .especialidades-box i {
     font-size: 70px;

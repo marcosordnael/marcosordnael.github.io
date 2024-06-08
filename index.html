@@ -27,16 +27,19 @@
     <title>Portfólio</title>
 
     <!-- FIREBASE configuração -->
-    <script type="module" src="assets/js/configFirebase.js"></script>
+    <script type="module" src="public/assets/js/configFirebase.js"></script>
     
     <!-- Menu JavaScript -->
-    <script type="module" src="assets/js/menu.js"></script>
+    <script type="module" src="public/assets/js/menu.js"></script>
 
     <!-- Janelas Flutuantes -->
-    <script src="assets/js/janela-flutuante.js"></script>
+    <script src="public/assets/js/janela-flutuante.js"></script>
+
+    <!-- JavaScript Carrossel -->
+    <script src="public/assets/js/carrossel.js"></script>
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
 
 </head>
 
@@ -82,7 +85,7 @@
             </div>
             <div class="logo">
                 <a href="#">
-                    <img src="assets/image/LogoMarcosL-removebg-preview.png" alt="logo" width="120px">
+                    <img src="public/assets/image/LogoMarcosL-removebg-preview.png" alt="logo" width="120px">
                 </a>
             </div>
         </div>
@@ -112,7 +115,7 @@
                     </div> <!--txt-topo-site-->
 
                     <div class="fundo-imagem">
-                        <img class="img-topo-site" src="assets/image/EuRedim.jpg" alt="imagem"
+                        <img class="img-topo-site" src="public/assets/image/EuRedim.jpg" alt="imagem"
                             >
 
                     </div> <!-- img-topo-site -->
@@ -120,40 +123,72 @@
             </div> <!--interface-->
         </section> <!--topo do site-->
 
+       
+        
+        
+
         <section class="especialidades" id="especialidades">
             <div class="interface">
                 <h2 class="titulo">MINHAS <span>ESPECIALIDADES</span>.</h2>
-                <div class="flex">
-                    <div class="especialidades-box">
-                        <i class="bi bi-filetype-html"></i>
-                        <h3>HTML 5     </h3>
-                        <p>Transformar ideias em código estruturado e acessível, criando a base sólida para o site.</p>
-                    </div> <!--especialidades-box-->
-                    <div class="especialidades-box">
-                        <i class="bi bi-filetype-css"></i>
-                        <h3>CSS      </h3>
-                        <p>Para dar vida ao design com estilo e elegância, garantindo uma experiência visualmente atraente para os usuários.</p>
-                    </div> <!--especialidades-box-->
-                    <div class="especialidades-box">
-                        <i class="bi bi-filetype-js"></i>
-                        <h3>JavaScript     </h3>
-                        <p>Para adicionar interatividade e dinamismo aos projetos, tornando a aplicação mais poderosa e envolvente.</p>
-                    </div> <!--especialidades-box-->
-                    <div class="especialidades-box">
-                        <i class="bi bi-android2"></i>
-                        <h3>Android Studio</h3>
-                        <p>Desenvolver aplicativos Android sob medida, utilizando linguagem Kotlin, combinando funcionalidade e usabilidade para atender às necessidades específicas dos seus usuários.
-                        </p>
-                    </div> <!--especialidades-box-->
-                </div> <!--flex-->
-            </div> <!--interface-->
-        </section> <!-- especialidades -->
+                <div class="carousel">
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <div class="carousel-container">
+                        <div class="slides">
+                            <div class="especialidades-box">
+                                <i class="bi bi-filetype-html"></i>
+                                <h3>HTML 5</h3>
+                                <p>Transformar ideias em código estruturado e acessível, criando a base sólida para o site.</p>
+                            </div>
+                            <div class="especialidades-box">
+                                <i class="bi bi-filetype-css"></i>
+                                <h3>CSS</h3>
+                                <p>Para dar vida ao design com estilo e elegância, garantindo uma experiência visualmente atraente para os usuários.</p>
+                            </div>
+                            <div class="especialidades-box">
+                                <i class="bi bi-filetype-js"></i>
+                                <h3>JavaScript</h3>
+                                <p>Para adicionar interatividade e dinamismo aos projetos, tornando a aplicação mais poderosa e envolvente.</p>
+                            </div>
+                            <div class="especialidades-box">
+                                <i class="bi bi-android2"></i>
+                                <h3>Android Studio</h3>
+                                <p>Desenvolver aplicativos Android sob medida, utilizando linguagem Kotlin, combinando funcionalidade e usabilidade para atender às necessidades específicas dos seus usuários.</p>
+                            </div>
+                            <div class="especialidades-box">
+                                <i class="bi bi-filetype-html"></i>
+                                <h3>HTML 5</h3>
+                                <p>Transformar ideias em código estruturado e acessível, criando a base sólida para o site.</p>
+                            </div>
+                            <div class="especialidades-box">
+                                <i class="bi bi-filetype-css"></i>
+                                <h3>CSS</h3>
+                                <p>Para dar vida ao design com estilo e elegância, garantindo uma experiência visualmente atraente para os usuários.</p>
+                            </div>
+                            <div class="especialidades-box">
+                                <i class="bi bi-filetype-js"></i>
+                                <h3>JavaScript</h3>
+                                <p>Para adicionar interatividade e dinamismo aos projetos, tornando a aplicação mais poderosa e envolvente.</p>
+                            </div>
+                            <div class="especialidades-box">
+                                <i class="bi bi-android2"></i>
+                                <h3>Android Studio</h3>
+                                <p>Desenvolver aplicativos Android sob medida, utilizando linguagem Kotlin, combinando funcionalidade e usabilidade para atender às necessidades específicas dos seus usuários.</p>
+                            </div>
+                            <!-- Adicione mais especialidades-box conforme necessário -->
+                        </div>
+                    </div>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+        
+        
 
         <section class="sobre" id="sobre">
             <div class="interface">
                 <div class="flex">
                     <div class="img-sobre">
-                        <img src="assets/image/EuRedim.jpg" alt="foto">
+                        <img src="public/assets/image/EuRedim.jpg" alt="foto">
                     </div>
                     <div class="txt-sobre">
                         <h2 class="titulo">MUITO PRAZER, <span>SOU MARCOS LEANDRO.</span></h2>
@@ -182,7 +217,7 @@
                 <div class="flex">
 
                     <div class="img-port"
-                        style="background-image: url(assets/image/projetos/iPhone-13-PRO-127.0.0.1\ \(1\).png);" onclick="abrirJanela1()">
+                        style="background-image: url(public/assets/image/projetos/iPhone-13-PRO-127.0.0.1\ \(1\).png);" onclick="abrirJanela1()">
 
                         <div class="overlay">
                             <p>Site Jogo da Velha</p>
@@ -192,7 +227,7 @@
 
 
                     <div class="img-port"
-                        style="background-image: url(assets/image/projetos/projeto-historia-palmeiras.jpeg);"
+                        style="background-image: url(public/assets/image/projetos/projeto-historia-palmeiras.jpeg);"
                         onclick="abrirJanela2()">
                         <div class="overlay">
                             <p>Site História do Palmeiras</p>
@@ -201,7 +236,7 @@
 
 
 
-                    <div class="img-port" style="background-image: url(assets/image/projetos/tela_inicial.png);"
+                    <div class="img-port" style="background-image: url(public/assets/image/projetos/tela_inicial.png);"
                         onclick="abrirJanela()">
                         <div class="overlay">
                             <p>Aplicativo Criança Feliz</p>
@@ -280,7 +315,7 @@
             <div class="line-footer">
                 <div class="flex">
                     <div class="logo-footer">
-                        <img src="assets/image/LogoMarcosL-removebg-preview.png" alt="Logo" width="120px">
+                        <img src="public/assets/image/LogoMarcosL-removebg-preview.png" alt="Logo" width="120px">
                     </div> <!--FIM LOGO FOOTER  -->
 
                     <div class="btn-social">

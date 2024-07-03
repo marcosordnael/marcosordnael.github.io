@@ -1,25 +1,24 @@
-let currentSlide = 0;
+// Variáveis globais
+let slideIndex = 0;
+const slides = document.querySelectorAll('.especialidades-box');
+const totalSlides = slides.length;
+const slideWidth = slides[0].offsetWidth; // largura de cada slide
 
-function moveSlide(direction) {
-    const slides = document.querySelectorAll('.slides .especialidades-box');
-    const totalSlides = slides.length;
+// Função para mover os slides
+function moveSlide(n) {
+    slideIndex += n;
 
-    currentSlide += direction;
-
-    if (currentSlide < 0) {
-        currentSlide = totalSlides - 1;
-    } else if (currentSlide >= totalSlides) {
-        currentSlide = 0;
+    // Verificar limites
+    if (slideIndex < 0) {
+        slideIndex = totalSlides - 1;
+    } else if (slideIndex >= totalSlides) {
+        slideIndex = 0;
     }
 
-    const slideWidth = slides[0].clientWidth;
-    const gap = 50; // Espaço entre os slides (definido no CSS)
-    const totalSlideWidth = slideWidth + gap;
-    const containerWidth = document.querySelector('.carousel-container').clientWidth;
-    const offset = -currentSlide * totalSlideWidth + (containerWidth - slideWidth) / 2;
-
-    document.querySelector('.slides').style.transform = `translateX(${offset}px)`;
+    const moveAmount = -slideIndex * slideWidth;
+    document.querySelector('.slides').style.transform = `translateX(${moveAmount}px)`;
 }
 
-// Initialize the carousel
-moveSlide(0);
+// Event listeners para os botões de navegação
+document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
+document.querySelector('.next').addEventListener('click', () => moveSlide(1));

@@ -26,7 +26,7 @@
 
     <title>Portfólio</title>
 
-    
+
 
     <!-- Estilos -->
     <link rel="stylesheet" href="public/assets/css/style.css">
@@ -87,35 +87,54 @@
                 <div class="flex">
                     <div class="txt-topo-site">
                         <h1>Transformando idéias em realidade digital <span>.</span></h1>
-                        <p>No decorrer do meu 4º semestre na faculdade de Análise e Desenvolvimento de Sistemas,
+                        <p id="apresentação">No decorrer da minha graduação na faculdade de Análise e Desenvolvimento de
+                            Sistemas,
                             busquei aprimorar minhas habilidades por meio de cursos profissionais renomados, incluindo:
-
-
-                            Curso de HTML5 e CSS3, JavaScript,
-                            MySQL, Java POO, Kotlin e Algoritmo. Esses cursos forneceram uma base sólida de conhecimento
+                            Curso de HTML5 e CSS3, JavaScript, MySQL, Java POO, Kotlin e Algoritmo. Esses cursos
+                            forneceram uma base sólida de conhecimento
                             técnico, essencial para a minha formação profissional e aplicação prática em futuros
-                            projetos."</p>
+                            projetos.
+                        </p>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const textoApresentação = document.getElementById('apresentação');
+                                const textoCompleto = textoApresentação.innerHTML;
+                                textoApresentação.innerHTML = '';
+                                let indice = 0;
+
+                                function maquinaEscrever() {
+                                    if (indice < textoCompleto.length) {
+                                        textoApresentação.innerHTML = textoCompleto.substring(0, indice + 1);
+                                        indice++;
+                                        setTimeout(maquinaEscrever, 75);
+                                    }
+                                }
+
+                                maquinaEscrever();
+                            });
+                        </script>
+
 
                         <div class="btn-social">
-                            <a href="https://www.linkedin.com/in/marcos-leandro-antunes/" target="_blank"   ><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://www.linkedin.com/in/marcos-leandro-antunes/" target="_blank"><button><i
+                                        class="bi bi-linkedin"></i></button></a>
 
-                            <a href="https://api.whatsapp.com/send?phone=5515991465355" target="_blank"><button 
+                            <a href="https://api.whatsapp.com/send?phone=5515991465355" target="_blank"><button
                                     id="whatsapp"><i class="bi bi-whatsapp"></i></button></a>
                         </div>
                     </div> <!--txt-topo-site-->
 
                     <div class="fundo-imagem">
-                        <img class="img-topo-site" src="public/assets/image/EuRedim.jpg" alt="imagem"
-                            >
+                        <img class="img-topo-site" src="public/assets/image/EuRedim.jpg" alt="imagem">
 
                     </div> <!-- img-topo-site -->
                 </div> <!--flex-->
             </div> <!--interface-->
         </section> <!--topo do site-->
 
-       
-        
-        
+
+
+
 
         <section class="especialidades" id="especialidades">
             <div class="interface">
@@ -127,52 +146,62 @@
                             <div class="especialidades-box">
                                 <i class="bi bi-filetype-html"></i>
                                 <h3>HTML 5</h3>
-                                <p>Transformar ideias em código estruturado e acessível, criando a base sólida para o site.</p>
+                                <p>Transformar ideias em código estruturado e acessível, criando a base sólida para o
+                                    site.</p>
                             </div>
                             <div class="especialidades-box">
                                 <i class="bi bi-filetype-css"></i>
                                 <h3>CSS</h3>
-                                <p>Para dar vida ao design com estilo e elegância, garantindo uma experiência visualmente atraente para os usuários.</p>
+                                <p>Para dar vida ao design com estilo e elegância, garantindo uma experiência
+                                    visualmente atraente para os usuários.</p>
                             </div>
                             <div class="especialidades-box">
                                 <i class="bi bi-filetype-js"></i>
                                 <h3>JavaScript</h3>
-                                <p>Para adicionar interatividade e dinamismo aos projetos, tornando a aplicação mais poderosa e envolvente.</p>
+                                <p>Para adicionar interatividade e dinamismo aos projetos, tornando a aplicação mais
+                                    poderosa e envolvente.</p>
                             </div>
                             <div class="especialidades-box">
                                 <i class="bi bi-android2"></i>
                                 <h3>Android Studio</h3>
-                                <p>Desenvolver aplicativos Android sob medida, utilizando linguagem Kotlin, combinando funcionalidade e usabilidade para atender às necessidades específicas dos seus usuários.</p>
+                                <p>Desenvolver aplicativos Android sob medida, utilizando linguagem Kotlin, combinando
+                                    funcionalidade e usabilidade para atender às necessidades específicas dos seus
+                                    usuários.</p>
                             </div>
                             <div class="especialidades-box">
                                 <i class="bi bi-filetype-html"></i>
                                 <h3>HTML 5</h3>
-                                <p>Transformar ideias em código estruturado e acessível, criando a base sólida para o site.</p>
+                                <p>Transformar ideias em código estruturado e acessível, criando a base sólida para o
+                                    site.</p>
                             </div>
                             <div class="especialidades-box">
                                 <i class="bi bi-filetype-css"></i>
                                 <h3>CSS</h3>
-                                <p>Para dar vida ao design com estilo e elegância, garantindo uma experiência visualmente atraente para os usuários.</p>
+                                <p>Para dar vida ao design com estilo e elegância, garantindo uma experiência
+                                    visualmente atraente para os usuários.</p>
                             </div>
                             <div class="especialidades-box">
                                 <i class="bi bi-filetype-js"></i>
                                 <h3>JavaScript</h3>
-                                <p>Para adicionar interatividade e dinamismo aos projetos, tornando a aplicação mais poderosa e envolvente.</p>
+                                <p>Para adicionar interatividade e dinamismo aos projetos, tornando a aplicação mais
+                                    poderosa e envolvente.</p>
                             </div>
                             <div class="especialidades-box">
                                 <i class="bi bi-android2"></i>
                                 <h3>Android Studio</h3>
-                                <p>Desenvolver aplicativos Android sob medida, utilizando linguagem Kotlin, combinando funcionalidade e usabilidade para atender às necessidades específicas dos seus usuários.</p>
+                                <p>Desenvolver aplicativos Android sob medida, utilizando linguagem Kotlin, combinando
+                                    funcionalidade e usabilidade para atender às necessidades específicas dos seus
+                                    usuários.</p>
                             </div>
-                            <!-- Adicione mais especialidades-box conforme necessário -->
+                            
                         </div>
                     </div>
                     <button class="next" onclick="moveSlide(1)">&#10095;</button>
                 </div>
             </div>
         </section>
-        
-        
+
+
 
         <section class="sobre" id="sobre">
             <div class="interface">
@@ -187,12 +216,15 @@
                             programador. Ingressei na faculdade de Análise e Desenvolvimento de Sistemas para ampliar
                             meus conhecimentos e obter um diploma que solidifique minha jornada. Com facilidade de
                             aprendizado e habilidades de comunicação bem desenvolvidas, estou constantemente buscando
-                            oportunidades para aprimorar minhas habilidades e me tornar um programador excepcional.Já realizei cursos de HTML 5 e CSS, JavaScript, Kotlin, Javo POO, Algoritmo, MySQL, Python. No momento estou empenhado em aprender Compose Multiplatform, React JS e WordPrass.</P>
+                            oportunidades para aprimorar minhas habilidades e me tornar um programador excepcional.Já
+                            realizei cursos de HTML 5 e CSS, JavaScript, Kotlin, Javo POO, Algoritmo, MySQL, Python. No
+                            momento estou empenhado em aprender Compose Multiplatform, React JS e WordPrass.</P>
                         <div class="btn-social">
-                            <a href="https://api.whatsapp.com/send?phone=5515991465355" target="_blank"><button 
+                            <a href="https://api.whatsapp.com/send?phone=5515991465355" target="_blank"><button
                                     id="whatsapp"><i class="bi bi-whatsapp"></i></button></a>
-                        
-                            <a href="https://www.linkedin.com/in/marcos-leandro-antunes/" target="_blank"   ><button><i class="bi bi-linkedin"></i></button></a>
+
+                            <a href="https://www.linkedin.com/in/marcos-leandro-antunes/" target="_blank"><button><i
+                                        class="bi bi-linkedin"></i></button></a>
                         </div>
                     </div>
                 </div>
@@ -207,10 +239,15 @@
                 <div class="flex">
 
                     <div class="img-port"
-                        style="background-image: url(public/assets/image/projetos/iPhone-13-PRO-127.0.0.1\ \(1\).png);" onclick="abrirJanela1()">
+                        style="background-image: url(public/assets/image/projetos/iPhone-13-PRO-jogodavelha.png);"
+                        onclick="abrirJanela1()">
+
+                        <!-- video -->
+                        <!-- onclick="abrirJanela1()">
+                        <video src="public/assets/image/projetos/iPhone-13-PRO-MAX-marcosordnael.github.io-kEt58tpK0-.webm" autoplay></video> -->
 
                         <div class="overlay">
-                            <p>Site Jogo da Velha</p>
+                            <p class="titulo">Site Jogo da Velha</p>
                         </div>
                     </div>
 
@@ -220,7 +257,7 @@
                         style="background-image: url(public/assets/image/projetos/projeto-historia-palmeiras.jpeg);"
                         onclick="abrirJanela2()">
                         <div class="overlay">
-                            <p>Site História do Palmeiras</p>
+                            <p class="titulo">Site História do Palmeiras</p>
                         </div>
                     </div>
 
@@ -229,7 +266,15 @@
                     <div class="img-port" style="background-image: url(public/assets/image/projetos/tela_inicial.png);"
                         onclick="abrirJanela()">
                         <div class="overlay">
-                            <p>Aplicativo Criança Feliz</p>
+                            <p class="titulo">Aplicativo Criança Feliz</p>
+                        </div>
+                    </div>
+
+
+                    <div class="img-port" style="background-image: url(public/assets/image/projetos/iPhone-13-Mini-novosite-86k1.onrender.com.png);"
+                        onclick="abrirJanela4()">
+                        <div class="overlay">
+                            <p class="titulo">Site de Login</p>
                         </div>
                     </div>
 
@@ -266,6 +311,16 @@
                         <img src="public/assets/image/projetos/tela_lista.png" alt="lista" width="200px">
                     </div>
                 </div>
+
+                <div id="janela4" class="janela">
+                    <span class="fechar" onclick="fecharJanela4()"><i class="bi bi-x-square"></i></span>
+                    <div class="conteudo-janela2">
+                        <iframe src="https://novosite-86k1.onrender.com/" frameborder="0"></iframe>
+
+                    </div>
+
+                </div>
+
                 <!-- FIM JANELAS FLUTUANTES -->
 
             </div>
@@ -282,17 +337,18 @@
                     <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
                     <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
                     <input type="tel" name="telefone" id="telefone" placeholder="Seu celular" required>
-                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" cols="30" rows="10" required></textarea>
-                    
+                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" cols="30" rows="10"
+                        required></textarea>
+
                     <div id="mensagem-sucesso" style="display: none;">
                         O formulário foi enviado com sucesso!
                     </div>
-                    
+
                     <div class="btn-enviar">
                         <button type="submit" id="enviar">ENVIAR</button>
                     </div>
                 </form>
-                
+
 
             </div>
         </section>
@@ -312,24 +368,30 @@
                         <a href="https://api.whatsapp.com/send?phone=5515991465355" target="_blank"><button><i
                                     class="bi bi-whatsapp"></i></button></a>
                         <a href="#"><button><i class="bi bi-youtube"></i></button></a>
-                        <a href="https://www.linkedin.com/in/marcos-leandro-antunes/" target="_blank "><button><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://www.linkedin.com/in/marcos-leandro-antunes/" target="_blank "><button><i
+                                    class="bi bi-linkedin"></i></button></a>
                     </div> <!-- FIM BTN SOCIAL -->
 
                 </div> <!-- FIM FLEX -->
 
-
+                <p>
+                    <i class="bi bi-envelope-fill"> <a
+                            href="mailto:marcosordnaeldev@gmail.com">marcosordnaeldev@gmail.com</a></i>
+                </p>
             </div> <!--FIM LINE FOOTER  -->
 
             <div class="line-footer borda">
-                <p><i class="bi bi-envelope-fill"> <a
-                            href="mailto:marcosordnaeldev@gmail.com">marcosordnaeldev@gmail.com</a></i></p>
+                
+
+                <p id="paraFooter">© 2024 Marcos Leandro. Todos os direitos reservados.</p>
+
             </div> <!--FIM LINE FOOTER  -->
         </div><!-- FIM INTERFACE -->
     </footer>
 
     <!-- FIREBASE configuração -->
     <script type="module" src="public/assets/js/configFirebase.js"></script>
-    
+
     <!-- Menu JavaScript -->
     <script type="module" src="public/assets/js/menu.js"></script>
 

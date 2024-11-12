@@ -30,19 +30,19 @@ function formulario(event) {
   const telefone = document.getElementById("telefone").value;
   const mensagem = document.getElementById("mensagem").value;
 
-  // Obtém uma referência para a lista de contatos
+  
   const contatosRef = ref(db, 'contatos');
 
-  // Adiciona um novo contato à lista utilizando push com a chave personalizada
+  
   const novoContatoRef = push(contatosRef);
 
-  // Obter a chave única gerada pelo Firebase
+  
   const novoContatoKey = novoContatoRef.key;
 
-  // Combine o nome com o número sequencial para criar a chave do contato
+  
   const chaveContato = `${nome}_${novoContatoKey}`;
 
-  // Define os dados do novo contato usando a chave personalizada
+ 
   set(ref(db, `contatos/${chaveContato}`), {
       nome: nome,
       email: email,
@@ -50,7 +50,7 @@ function formulario(event) {
       mensagem: mensagem
   });
 
-  // Limpa os dados do formulário
+ 
   event.target.reset();
   exibirMensagemDeSucesso();
 }
@@ -62,7 +62,7 @@ function exibirMensagemDeSucesso() {
     var formularioElement = document.getElementById('meu-formulario');
     var mensagemSucesso = document.getElementById('mensagem-sucesso');
     
-    // Exibe a mensagem de sucesso
+   
     mensagemSucesso.style.display = 'block'; 
 
   

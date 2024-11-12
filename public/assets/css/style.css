@@ -66,6 +66,8 @@ header {
 }
 
 header>.interface {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -287,12 +289,12 @@ h1 span {
     display: flex;
     transition: transform 0.5s ease-in-out;
     gap: 0px;
-    width: calc(100% + 0px); /* Considerando o gap */
+    width: calc(100% + 0px); 
     
 }
 
 .especialidades-box {
-    flex: 0 0 30%; /* Cada slide ocupa 30% da largura do container */
+    flex: 0 0 30%; 
     box-sizing: border-box;
     
     border-radius: 20px;
@@ -351,7 +353,7 @@ button.prev {
 
     button.prev,
     button.next {
-        display: none; /* Oculta os botões de navegação */
+        display: none; 
     }
 }
 
@@ -604,7 +606,7 @@ footer .line-footer p a {
     text-align: center;
     border: 1px solid #888;
     width: 80%;
-    height: 95%; /* Defina a largura da janela conforme necessário */
+    height: 95%; 
   }
   
   
@@ -615,7 +617,7 @@ footer .line-footer p a {
     text-align: center;
     border: 1px solid #888;
     width: 90%;
-    height: 90%; /* Defina a largura da janela conforme necessário */
+    height: 90%; 
   }
 
   .conteudo-janela {
@@ -624,7 +626,7 @@ footer .line-footer p a {
     padding: 30px;
     text-align: center;
     border: 1px solid #888;
-    width: 90%; /* Defina a largura da janela conforme necessário */
+    width: 90%; 
   }
 
   .conteudo-janela4 {
@@ -633,7 +635,7 @@ footer .line-footer p a {
     padding: 30px;
     text-align: center;
     border: 1px solid #888;
-    width: 90%; /* Defina a largura da janela conforme necessário */
+    width: 90%; 
   }
 
   .conteudo-janela img{

@@ -2,7 +2,7 @@
 let slideIndex = 0;
 const slides = document.querySelectorAll('.especialidades-box');
 const totalSlides = slides.length;
-const slideWidth = slides[0].offsetWidth; // largura de cada slide
+const slideWidth = slides[0].offsetWidth; 
 
 // Função para mover os slides
 function moveSlide(n) {

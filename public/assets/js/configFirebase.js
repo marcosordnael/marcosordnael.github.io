@@ -6,7 +6,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/fireba
 
 
   // Configuração do Firebase
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
     apiKey: "AIzaSyBa6hfQcNe1o8wTZaG5G2p8x_1GC5Hh6RM",
     authDomain: "formulario-portfolio-c32d1.firebaseapp.com",

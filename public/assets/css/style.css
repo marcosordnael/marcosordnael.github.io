@@ -306,7 +306,7 @@ h1 span {
     position: absolute;
     top: 50%;
     font-size: 24px;
-    background-color: #e63946;
+    background-color: #15384b;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -352,7 +352,7 @@ h1 span {
 
 .especialidades-box i {
     font-size: 2.5em;
-    color: #e63946;
+    color: #15384b;
     margin-bottom: 10px;
 }
 
@@ -424,29 +424,33 @@ section.portfolio {
 
 
 section.portfolio .flex {
-    justify-content: space-around;
-    margin-top: 60px;
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    flex-wrap: nowrap; /* Permite que as imagens se movam para a linha seguinte em telas menores */
+    gap: 20px; /* Espaço entre as imagens */
 }
-p.titulo{
+p.titulo-over{
     text-align: center;
+    font-size: 14px;
 }
 
 .img-port {
-    width: 390px;
+    width: 100%;
     height: 480px;
     background-size: cover;
     background-position: 100% 0%;
     transition: 20s;
+    text-align: center;
     cursor: pointer;
     border-radius: 10px;
     position: relative;
 
 }
-/* video{
-    width: 390px;
-    height: 480px;
-} */
 
+.img-port > img {
+    width: 200px;
+    
+}
 
 
 .img-port:hover {

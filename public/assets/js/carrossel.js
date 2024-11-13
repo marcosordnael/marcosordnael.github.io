@@ -1,39 +1,20 @@
-const slidesContainer = document.querySelector('.carousel-container');
-const slides = Array.from(document.querySelectorAll('.especialidades-box'));
-const totalSlides = slides.length;
 let currentSlide = 0;
 
-// Duplicar os slides para continuidade
-slides.forEach(slide => {
-    const clone = slide.cloneNode(true);
-    slidesContainer.appendChild(clone); // Clona no final
-});
-
-// Calcula a largura de cada slide, incluindo margens
-const slideWidth = slides[0].offsetWidth + 20; // Inclui a margem entre os cards
-const visibleSlides = Math.floor(slidesContainer.offsetWidth / slideWidth);
-
-// Posiciona o carrossel no primeiro slide
-slidesContainer.style.transform = `translateX(0px)`;
-
 function moveSlide(direction) {
+    const slides = document.querySelector('.carousel-container');
+    const totalSlides = document.querySelectorAll('.especialidades-box').length;
+    const slideWidth = document.querySelector('.especialidades-box').offsetWidth + 20; // Inclui margem
+    
+    // Atualiza o slide atual com base na direção
     currentSlide += direction;
-    slidesContainer.style.transition = 'transform 0.5s ease-in-out';
-    slidesContainer.style.transform = `translateX(${-slideWidth * currentSlide}px)`;
 
-    slidesContainer.addEventListener('transitionend', () => {
-        // Se for além do último slide duplicado
-        if (currentSlide >= totalSlides) {
-            slidesContainer.style.transition = 'none';
-            currentSlide = 0;
-            slidesContainer.style.transform = `translateX(0px)`;
-        }
+    // Looping do carrossel
+    if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    } else if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    }
 
-        // Se for para a esquerda antes do primeiro slide
-        if (currentSlide < 0) {
-            slidesContainer.style.transition = 'none';
-            currentSlide = totalSlides - visibleSlides;
-            slidesContainer.style.transform = `translateX(${-slideWidth * currentSlide}px)`;
-        }
-    });
+    // Move o carrossel
+    slides.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
 }

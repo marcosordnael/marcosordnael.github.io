@@ -436,11 +436,10 @@ section.portfolio {
 section.portfolio .flex {
     display: flex;
     justify-content: center;
-    /* Centraliza os itens */
     flex-wrap: nowrap;
-    /* Permite que as imagens se movam para a linha seguinte em telas menores */
     gap: 20px;
-    /* Espaço entre as imagens */
+    padding-top:80px
+    
 }
 
 p.titulo-over {
@@ -827,10 +826,6 @@ iframe {
 
 
     /* PORTFOLIO */
-
-    section.portfolio {}
-
-    .img-port {}
 
     section.portfolio.flex {
         gap: 60px;

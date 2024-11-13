@@ -21,7 +21,7 @@ body {
 
 .flex {
     display: flex;
-    
+
 
 }
 
@@ -111,7 +111,7 @@ header nav.menu-desktop ul li {
 
 }
 
-.overlay-menu{
+.overlay-menu {
     background-color: #000000a7;
     width: 100%;
     height: 100%;
@@ -123,7 +123,7 @@ header nav.menu-desktop ul li {
 }
 
 /* ESTILOS MENU MOBILE */
-.btn-abrir-menu i{
+.btn-abrir-menu i {
     color: #15384b;
     font-size: 40px;
     position: fixed;
@@ -133,7 +133,7 @@ header nav.menu-desktop ul li {
     display: none;
 }
 
-.menu-mobile{
+.menu-mobile {
     background-color: #000;
     height: 100vh;
     position: fixed;
@@ -143,38 +143,41 @@ header nav.menu-desktop ul li {
     width: 0%;
     overflow: hidden;
     transition: .5s;
-    
+
 
 }
 
-.menu-mobile.abrir-menu{
+.menu-mobile.abrir-menu {
     width: 70%;
 }
-.menu-mobile.abrir-menu ~.overlay-menu{
+
+.menu-mobile.abrir-menu~.overlay-menu {
     display: block;
 }
 
-.menu-mobile.fechar-menu{
+.menu-mobile.fechar-menu {
     width: 0;
 }
 
 .menu-mobile .btn-fechar {
-    position: absolute; 
+    position: absolute;
 
     padding: 20px 5%;
 }
 
 
-.menu-mobile .btn-fechar i{
+.menu-mobile .btn-fechar i {
     color: #15384b;
     font-size: 30px;
-    
+
 }
-.menu-mobile nav ul{
+
+.menu-mobile nav ul {
     text-align: right;
     margin-top: 60px;
 }
-.menu-mobile nav ul li a{
+
+.menu-mobile nav ul li a {
     color: #fff;
     font-size: 20px;
     font-weight: 300;
@@ -182,7 +185,7 @@ header nav.menu-desktop ul li {
     display: block;
 }
 
-.menu-mobile nav ul li a:hover{
+.menu-mobile nav ul li a:hover {
     background-color: #15384b;
 }
 
@@ -217,9 +220,9 @@ h1 span {
 }
 
 #apresentação {
-    
+
     color: white;
-    
+
 }
 
 #apresentação::after {
@@ -229,9 +232,12 @@ h1 span {
 }
 
 @keyframes blink {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
@@ -278,6 +284,7 @@ h1 span {
     margin-bottom: 20px;
     color: #333;
 }
+
 .titulo span {
     color: #e63946;
 }
@@ -287,7 +294,7 @@ h1 span {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 810px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -302,7 +309,8 @@ h1 span {
 
 
 /* Botões de navegação */
-.carousel .prev, .carousel .next {
+.carousel .prev,
+.carousel .next {
     position: absolute;
     top: 50%;
     font-size: 24px;
@@ -315,14 +323,16 @@ h1 span {
     transition: background-color 0.3s;
 }
 
-.carousel .prev:hover, .carousel .next:hover {
-    background-color: #b61e3c;
+.carousel .prev:hover,
+.carousel .next:hover {
+    background-color: #1c4155;
 }
 
 .carousel .prev {
-    left: 10px;
+    left: 0px;
     z-index: 1;
 }
+
 .carousel .next {
     right: 0px;
     z-index: 1;
@@ -335,14 +345,14 @@ h1 span {
 
 /* Cartão de especialidade */
 .especialidades-box {
-    background: #fff;
+    background: #09161d;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 10px;
     text-align: center;
-    min-width: 250px; 
+    min-width: 250px;
     transition: transform 0.3s ease;
 }
 
@@ -352,18 +362,18 @@ h1 span {
 
 .especialidades-box i {
     font-size: 2.5em;
-    color: #15384b;
+    color: #6f9eb8;
     margin-bottom: 10px;
 }
 
 .especialidades-box h3 {
     font-size: 1.2em;
-    color: #333;
+    color: #eee9e9;
     margin: 10px 0;
 }
 
 .especialidades-box p {
-    color: #666;
+    color: #b6b2b2;
     font-size: 0.9em;
     line-height: 1.4;
 }
@@ -398,7 +408,7 @@ h2.sobre span {
 p.txt-sobre {
     margin: 20px 0;
     color: white;
-    
+
 }
 
 .btn-social button {
@@ -425,11 +435,15 @@ section.portfolio {
 
 section.portfolio .flex {
     display: flex;
-    justify-content: center; /* Centraliza os itens */
-    flex-wrap: nowrap; /* Permite que as imagens se movam para a linha seguinte em telas menores */
-    gap: 20px; /* Espaço entre as imagens */
+    justify-content: center;
+    /* Centraliza os itens */
+    flex-wrap: nowrap;
+    /* Permite que as imagens se movam para a linha seguinte em telas menores */
+    gap: 20px;
+    /* Espaço entre as imagens */
 }
-p.titulo-over{
+
+p.titulo-over {
     text-align: center;
     font-size: 14px;
 }
@@ -447,9 +461,9 @@ p.titulo-over{
 
 }
 
-.img-port > img {
+.img-port>img {
     width: 200px;
-    
+
 }
 
 
@@ -530,7 +544,8 @@ form .btn-enviar button {
     transition: .2s;
 
 }
-#mensagem-sucesso{
+
+#mensagem-sucesso {
     color: white;
     text-align: center;
 }
@@ -568,85 +583,87 @@ footer .line-footer p a {
 
 /* Janela */
 .janela {
-    display: none; 
+    display: none;
     position: fixed;
-    z-index: 999; 
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7); 
-  }
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
-  .conteudo-janela1 {
+.conteudo-janela1 {
     background-color: #fefefe;
     margin: 1% auto;
     padding: 0px;
     text-align: center;
     border: 1px solid #888;
     width: 80%;
-    height: 95%; 
-  }
-  
-  
-  .conteudo-janela2 {
+    height: 95%;
+}
+
+
+.conteudo-janela2 {
     background-color: #fefefe;
     margin: 1% auto;
     padding: 0px;
     text-align: center;
     border: 1px solid #888;
     width: 90%;
-    height: 90%; 
-  }
+    height: 90%;
+}
 
-  .conteudo-janela {
+.conteudo-janela {
     background-color: #fefefe;
     margin: 3% auto;
     padding: 30px;
     text-align: center;
     border: 1px solid #888;
-    width: 90%; 
-  }
+    width: 90%;
+}
 
-  .conteudo-janela4 {
+.conteudo-janela4 {
     background-color: #fefefe;
     margin: 3% auto;
     padding: 30px;
     text-align: center;
     border: 1px solid #888;
-    width: 90%; 
-  }
+    width: 90%;
+}
 
-  .conteudo-janela img{
+.conteudo-janela img {
     margin: 10px;
-  }
+}
 
-  iframe{
+iframe {
     width: 100%;
     height: 100%;
-  }
-  #jogovelha{
+}
+
+#jogovelha {
     width: 100%;
     height: 100%;
     overflow: hidden;
-  }
-  
-  .fechar {
+}
+
+.fechar {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
     margin: 10px 20px;
-  }
-  
-  .fechar:hover,
-  .fechar:focus {
+}
+
+.fechar:hover,
+.fechar:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-  #paraFooter{
+}
+
+#paraFooter {
     color: white;
     text-align: center;
     margin-top: 60px;
@@ -663,9 +680,10 @@ footer .line-footer p a {
         display: flex;
         flex-direction: column;
         text-align: center;
-       
+
     }
-    .btn-abrir-menu i{
+
+    .btn-abrir-menu i {
         display: inline-block;
     }
 
@@ -684,7 +702,7 @@ footer .line-footer p a {
         line-height: 40px;
         font-size: 34px;
         text-align: center;
-        
+
     }
 
 
@@ -704,7 +722,8 @@ footer .line-footer p a {
         font-size: 30px;
         line-height: 40px;
     }
-    .txt-topo-site p{
+
+    .txt-topo-site p {
         text-align: left;
     }
 
@@ -715,25 +734,54 @@ footer .line-footer p a {
     /* ESPECIALIDADES */
     @media (max-width: 1024px) {
         .especialidades-box {
-            flex: 0 0 200px; /* Reduz a largura dos cards para telas menores */
+            flex: 0 0 200px;
+            /* Reduz a largura dos cards para telas menores */
             margin: 0 8px;
         }
     }
-    
+
     @media (max-width: 768px) {
         .especialidades-box {
-            flex: 0 0 150px; /* Reduz ainda mais para telas pequenas */
+            flex: 0 0 150px;
+            /* Reduz ainda mais para telas pequenas */
             margin: 0 5px;
         }
     }
-    
+
     @media (max-width: 480px) {
+
+        .interface {
+            max-width: 1200px;
+            margin: 5px 5px;
+        }
+        /* Botões de navegação */
+        .carousel .prev,
+        .carousel .next {
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            transform: translateY(-70%);
+            
+        }
+
+        /* Estilo dos slides */
+        .slides {
+            display: flex;
+        }
+
+        /* Cartão de especialidade */
         .especialidades-box {
-            flex: 0 0 120px; /* Largura mínima dos cards em dispositivos móveis */
-            margin: 0 3px;
+            padding: 0;
+            margin: 10px;
+            min-width: 200px;
+            transition: transform 0.3s ease;
+        }
+
+        .especialidades-box:hover {
+            transform: none;
         }
     }
-    
+
     /* janela */
     .fechar {
         position: fixed;
@@ -743,64 +791,62 @@ footer .line-footer p a {
         color: #c7c3c3;
         font-size: 20px;
         font-weight: bold;
-      }
-      
-      .conteudo-janela { 
-        margin: 10% auto; 
-      }
-      .conteudo-janela2 { 
-        margin: 10% auto; 
-      }
-      .conteudo-janela1 {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%; 
-    height: 90%;
-}
+    }
 
-      
+    .conteudo-janela {
+        margin: 10% auto;
+    }
+
+    .conteudo-janela2 {
+        margin: 10% auto;
+    }
+
+    .conteudo-janela1 {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+    }
+
+
 
 
     /* SOBRE */
-    
-        
-    section.sobre{
+
+
+    section.sobre {
         padding: 8%;
-        
+
     }
 
-    .btn-social button{
+    .btn-social button {
         margin-bottom: 30px;
     }
 
 
     /* PORTFOLIO */
 
-    section.portfolio{
-        
-    }
+    section.portfolio {}
 
-    .img-port {
-        
-    
-    }
+    .img-port {}
 
-    section.portfolio.flex{
+    section.portfolio.flex {
         gap: 60px;
     }
 
     /* RODAPÉ/FOOTER */
-    footer.flex{
+    footer.flex {
         flex-direction: column;
         gap: 30px;
-        
+
     }
-    .line-footer .bi-envelope-fill{
+
+    .line-footer .bi-envelope-fill {
         font-size: 14px;
     }
-    
-    
+
+
 
 }

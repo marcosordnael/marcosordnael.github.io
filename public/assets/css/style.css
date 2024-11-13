@@ -684,6 +684,8 @@ iframe {
 
     .btn-abrir-menu i {
         display: inline-block;
+        z-index: 99;
+        color: #FFF;
     }
 
 

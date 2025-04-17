@@ -83,6 +83,7 @@ header a {
     text-decoration: none;
     transition: .2s;
     display: inline-block;
+    padding: 5px 20px;
 }
 
 header nav.menu-desktop a:hover {
@@ -90,8 +91,8 @@ header nav.menu-desktop a:hover {
     background-color: #15384b;
     box-shadow: 0px 0px 10px;
     border-radius: 25px;
-    padding: 5px 20px;
     
+
 }
 
 header nav ul {
@@ -265,12 +266,31 @@ h1 span {
     }
 }
 
+.botao-curriculo {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 12px 20px;
+    background-color: #15384b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botao-curriculo:hover {
+    background-color: #15384b;
+    box-shadow: 0px 0px 10px white;
+    transform: scale(1.05);
+}
+
+
 /* Estilos Carrossel */
 .especialidades {
     padding: 50px 0;
-    height: 100vh;
+    
     box-shadow: 0px 0px 40px 10px #ffffff1d;
-    text-align: center; 
+    text-align: center;
 }
 
 a,
@@ -294,6 +314,7 @@ a,
 /* Carrossel */
 .carousel {
     position: relative;
+    width: 100%;
     max-width: 810px;
     margin: 0 auto;
     overflow: hidden;
@@ -381,9 +402,9 @@ a,
 
 /* ESTILOS DO SOBRE */
 section.sobre {
-    height: 100vh;
-    padding: 50px 0;
     
+    padding: 50px 0;
+
 }
 
 
@@ -398,7 +419,7 @@ h2.sobre {
     font-size: 38px;
     line-height: 40px;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
 }
 
 h2.sobre span {
@@ -432,10 +453,10 @@ p.txt-sobre {
 /* ESTILOS PORTFOLIO */
 
 section.portfolio {
-    height: 100vh;
+    
     padding: 50px 0;
     box-shadow: 0px 0px 40px 10px #ffffff1d;
-    
+
 }
 
 
@@ -444,8 +465,7 @@ section.portfolio .flex {
     justify-content: center;
     flex-wrap: nowrap;
     gap: 10px;
-    padding-top:10px
-    
+    padding-top: 10px
 }
 
 p.titulo-over {
@@ -501,7 +521,7 @@ p.titulo-over {
 /* ESTILOS FALE COMIGO */
 
 section.formulario {
-    padding: 80px 4%;
+    padding: 50px 0;
 }
 
 form {
@@ -560,7 +580,7 @@ form .btn-enviar button {
 /* ESTILOS FOOTER */
 
 footer {
-    padding: 60px 4%;
+    padding: 50px 0;
     box-shadow: 0px 0px 40px 10px #ffffff1d;
 }
 
@@ -671,12 +691,23 @@ iframe {
 #paraFooter {
     color: white;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 
 
 /* ESTILOS RESPONSIVO */
+@media (min-width: 1021px) {
+    section.sobre {
+        height: 100vh;
+    }
+    .especialidades{
+        height: 100vh;
+    }
+    section.portfolio{
+        height: 100vh;
+    }
+}
 
 @media screen and (max-width: 1020px) {
 
@@ -761,6 +792,7 @@ iframe {
             max-width: 1200px;
             margin: 5px 5px;
         }
+
         /* Botões de navegação */
         .carousel .prev,
         .carousel .next {
@@ -768,7 +800,7 @@ iframe {
             cursor: pointer;
             padding: 10px;
             transform: translateY(-70%);
-            
+
         }
 
         /* Estilo dos slides */

@@ -19,12 +19,6 @@ body {
 }
 
 
-.flex {
-    display: flex;
-
-
-}
-
 .btn-contato button {
     padding: 10px 40px;
     font-size: 18px;
@@ -97,7 +91,7 @@ header nav.menu-desktop a:hover {
     box-shadow: 0px 0px 10px;
     border-radius: 25px;
     padding: 5px 20px;
-    transform: scale(1.05);
+    
 }
 
 header nav ul {
@@ -143,9 +137,8 @@ header nav.menu-desktop ul li {
     width: 0%;
     overflow: hidden;
     transition: .5s;
-
-
 }
+
 
 .menu-mobile.abrir-menu {
     width: 70%;
@@ -201,6 +194,7 @@ section.topo-do-site {
 }
 
 .flex {
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 90px;
@@ -267,16 +261,23 @@ h1 span {
     }
 
     100% {
-        top: 30px;
+        top: 10px;
     }
 }
 
 /* Estilos Carrossel */
-.section.especialidades {
+.especialidades {
     padding: 50px 0;
-    background-color: #f5f5f5;
-    text-align: center;
+    height: 100vh;
+    box-shadow: 0px 0px 40px 10px #ffffff1d;
+    text-align: center; 
 }
+
+a,
+.especialidades-box {
+    transition: all 0.3s ease-in-out;
+}
+
 
 /* Título */
 .titulo {
@@ -293,7 +294,6 @@ h1 span {
 /* Carrossel */
 .carousel {
     position: relative;
-    width: 100%;
     max-width: 810px;
     margin: 0 auto;
     overflow: hidden;
@@ -381,12 +381,15 @@ h1 span {
 
 /* ESTILOS DO SOBRE */
 section.sobre {
-    padding: 80px 4%;
+    height: 100vh;
+    padding: 50px 0;
+    
 }
 
 
 
 .img-sobre img {
+    margin-top: 50px;
     border-radius: 20px;
 }
 
@@ -429,7 +432,10 @@ p.txt-sobre {
 /* ESTILOS PORTFOLIO */
 
 section.portfolio {
+    height: 100vh;
+    padding: 50px 0;
     box-shadow: 0px 0px 40px 10px #ffffff1d;
+    
 }
 
 
@@ -437,8 +443,8 @@ section.portfolio .flex {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-    gap: 20px;
-    padding-top:80px
+    gap: 10px;
+    padding-top:10px
     
 }
 

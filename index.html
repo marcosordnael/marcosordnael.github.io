@@ -90,7 +90,11 @@
                 <div class="flex">
                     <div class="txt-topo-site">
                         <h1>Marcos Leandro Antunes <span>Desenvolvedor WEB</span>.</h1>
-                        <p id="apresentacao">No decorrer da minha graduação na faculdade de Análise e Desenvolvimento de Sistemas, busquei aprimorar minhas habilidades por meio de cursos profissionais renomados, incluindo: Curso de HTML5 e CSS3, JavaScript, MySQL, Java POO, Kotlin e Algoritmo. Esses cursos forneceram uma base sólida de conhecimento técnico, essencial para a minha formação profissional e aplicação prática em futuros projetos.</p>
+                        <p id="apresentacao">No decorrer da minha graduação na faculdade de Análise e Desenvolvimento de
+                            Sistemas, busquei aprimorar minhas habilidades por meio de cursos profissionais renomados,
+                            incluindo: Curso de HTML5 e CSS3, JavaScript, MySQL, Java POO, Kotlin e Algoritmo. Esses
+                            cursos forneceram uma base sólida de conhecimento técnico, essencial para a minha formação
+                            profissional e aplicação prática em futuros projetos.</p>
 
                         <script>
                             document.addEventListener("DOMContentLoaded", function () {
@@ -331,21 +335,21 @@
             <div class="interface">
                 <h2 class="titulo">FALE <span>COMIGO.</span></h2>
 
-                <form id="meu-formulario" onsubmit="formulario(event)">
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
-                    <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
-                    <input type="tel" name="telefone" id="telefone" placeholder="Seu celular" required>
-                    <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" cols="30" rows="10"
-                        required></textarea>
+                <form id="form-contato">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
 
-                    <div id="mensagem-sucesso" style="display: none;">
-                        O formulário foi enviado com sucesso!
-                    </div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
 
-                    <div class="btn-enviar">
-                        <button type="submit" id="enviar">ENVIAR</button>
-                    </div>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+
+                    <button type="submit">Enviar</button>
                 </form>
+
+                <p id="status"></p>
+
 
 
             </div>
@@ -390,6 +394,10 @@
 
     <!-- FIREBASE configuração -->
     <script type="module" src="public/assets/js/configFirebase.js"></script>
+
+    <script src="public/assets/js/formulario.js"></script>
+
+
 
     <!-- Menu JavaScript -->
     <script type="module" src="public/assets/js/menu.js"></script>

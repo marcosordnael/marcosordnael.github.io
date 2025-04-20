@@ -1,5 +1,12 @@
 {
+  "name": "portfoliomarcosleandro",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "nodemailer": "^6.9.13",
+    "cors": "^2.8.5",
+    "micro": "^10.0.1"
   }
 }

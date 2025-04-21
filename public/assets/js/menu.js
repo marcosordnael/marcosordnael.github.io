@@ -22,56 +22,37 @@ overLay.addEventListener('click', () => {
 
 
 
-// FORMULÁRIO
-function formulario(event) {
-    event.preventDefault();
+const form = document.querySelector('form');
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const telefone = document.getElementById("telefone").value;
-    const mensagem = document.getElementById("mensagem").value;
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const mensagem = document.getElementById('mensagem').value;
 
-    const urlServidor = 'https://servidor-firebase-q1dn35z49-marcos-projects-c2476069.vercel.app/api/enviar-dados';
+    const dados = { nome, email, mensagem };
 
-
-    // Dados que serão enviados para o servidor
-    const dados = {
-        nome: nome,
-        email: email,
-        telefone: telefone,
-        mensagem: mensagem
-    };
-
-    // Enviar dados para o servidor
-    fetch(urlServidor, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dados)
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.mensagem === 'Dados salvos com sucesso!') {
-                exibirMensagemDeSucesso();
-            } else {
-                console.error('Erro ao salvar os dados:', data.erro);
-            }
-        })
-        .catch(error => {
-            console.error('Erro ao enviar os dados:', error);
+    try {
+        const resposta = await fetch('https://servidor-firebase-8gdlaw6dn-marcos-projects-c2476069.vercel.app/api/enviar-dados', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dados)
         });
 
-    event.target.reset();
-}
+        const resultado = await resposta.json();
+        console.log(resultado);
 
-window.formulario = formulario;
+        if (resposta.ok) {
+            alert('Mensagem enviada com sucesso!');
+            form.reset();
+        } else {
+            alert('Erro ao enviar mensagem: ' + resultado.erro);
+        }
 
-function exibirMensagemDeSucesso() {
-    var formularioElement = document.getElementById('meu-formulario');
-    var mensagemSucesso = document.getElementById('mensagem-sucesso');
-    mensagemSucesso.style.display = 'block';
-}
-
-
-
+    } catch (erro) {
+        console.error('Erro na requisição:', erro);
+        alert('Erro ao conectar com o servidor.');
+    }
+});

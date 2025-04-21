@@ -7,6 +7,9 @@ function formulario(event) {
     const telefone = document.getElementById("telefone").value;
     const mensagem = document.getElementById("mensagem").value;
 
+    const urlServidor = 'https://servidor-firebase.onrender.com/enviar-dados';  // URL correta do Render
+
+    // Dados que serão enviados para o servidor
     const dados = {
         nome: nome,
         email: email,
@@ -14,38 +17,33 @@ function formulario(event) {
         mensagem: mensagem
     };
 
-    
-    
-    fetch('https://servidor-firebase.vercel.app/', {
+    // Enviar dados para o servidor
+    fetch(urlServidor, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(dados)
     })
-    .then(res => {
-        if (!res.ok) {
-            throw new Error("Erro ao enviar dados");
-        }
-        return res.json();
-    })
+    .then(response => response.json())
     .then(data => {
-        console.log(data);
-        event.target.reset();
-        exibirMensagemDeSucesso();
+        if (data.mensagem === 'Dados salvos com sucesso!') {
+            exibirMensagemDeSucesso();
+        } else {
+            console.error('Erro ao salvar os dados:', data.erro);
+        }
     })
-    .catch(err => {
-        console.error(err);
-        alert("Ocorreu um erro. Tente novamente.");
+    .catch(error => {
+        console.error('Erro ao enviar os dados:', error);
     });
+
+    event.target.reset();
 }
 
 window.formulario = formulario;
 
 function exibirMensagemDeSucesso() {
+    var formularioElement = document.getElementById('meu-formulario');
     var mensagemSucesso = document.getElementById('mensagem-sucesso');
     mensagemSucesso.style.display = 'block';
 }
-
-
-

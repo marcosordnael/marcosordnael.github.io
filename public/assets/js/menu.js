@@ -1,6 +1,4 @@
-
-import { db, set, push, ref } from "./configFirebase.js"
-
+// Menu Mobile
 let btnMenu = document.getElementById('btn-menu')
 let menu = document.getElementById('menu-mobile')
 let overLay = document.getElementById('overlay-menu')
